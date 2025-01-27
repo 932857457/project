@@ -1,0 +1,25 @@
+server:
+  port: 8082
+spring:
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/db_java1234_mall?serverTimezone=UTC
+      username: usredumana
+      password: 123456
+
+mybatis-plus:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      table-underline: false
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    auto-mapping-behavior: full
+    map-underscore-to-camel-case: false
+
+weixin:
+  jscode2sessionUrl: https://api.weixin.qq.com/sns/jscode2session
+  appid: wx72728d2c24d04d90
+  secret: ac897927ab9c931bb97ba3abfe6f0086
